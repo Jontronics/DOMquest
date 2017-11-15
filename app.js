@@ -49,33 +49,47 @@ boss.onclick = function (){
   // How can i tell the btn has been clicked? 
   
       // add id's to each button. 
-      
       function getRandomInt(min, max) {
           return Math.floor(Math.random() * (max - min + 1)) + min;
       }
-      
-      
-      
-    //  let smallBtn = document.querySelector("#small");
-        let smallBtn = document.getElementById("small")
-         
-        let cashTotal = document.querySelector("span") 
-        
-        let counter = 0;
-        
-        smallBtn.addEventListener("click", function(){
-          
-          // console.log("clicked") (check the code to see if it works.)
-          
-          // lets generate a random number
-          
-          let randomNum = getRandomInt(10,20);
-          
-          counter += randomNum; 
-          
-          cashTotal.textContent = counter;
-          
-          
-        });
-        
+
+
+      // let smallBtn = document.querySelector("#small");
+      let smallBtn = document.getElementById("small");
+      let longBtn = document.getElementById("long");
+      let bossBtn = document.getElementById("boss");
+
+      let cashTotal = document.querySelector("span");
+
+      let counter = 0;
+
+      smallBtn.addEventListener("click", function(){
+
+        let randomNum = getRandomInt(10, 20);
+
+        counter += randomNum;
+
+        cashTotal.textContent = counter;
+
+      });
+
+      longBtn.addEventListener("click", function(){
+
+        let randomNum = getRandomInt(30, 50);
+
+        counter += randomNum;
+
+        cashTotal.textContent = counter;
+
+      });
+
+      bossBtn.addEventListener("click", function(){
+
+        let randomNum = getRandomInt(70, 100);
+
+        counter += randomNum;
+
+        cashTotal.textContent = counter;
+
+      });
         
